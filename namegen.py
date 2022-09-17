@@ -13,7 +13,6 @@ from argparse import RawTextHelpFormatter
 import argparse
 import sys
 import hashlib
-from datetime import datetime
 
 if __name__ == '__main__': 
 
@@ -32,8 +31,9 @@ last = args.last
 out = args.output
 domain = args.domain
 
+#if no output file specified, write to namegen-output.txt
 if args.output is None:
-    out = str(datetime.today().strftime('%Y-%m-%d')) + '-' + 'namegen-output.txt' 
+    out = 'namegen-output.txt'
 
 print("\nFormat Options: \n")
 print("|------------------------------|")
@@ -51,6 +51,7 @@ print("| 11 - first@domain.com        |")
 print("| 12 - last@domain.com         |")
 print("|______________________________|\n")
 
+#ensure selection is within Format Options
 while True:
     try:
         choice = int(input("Select desired format #: "))
@@ -339,7 +340,7 @@ elif choice == 12:
         file.close()
 
 
-
+#append the domain (if supplied) and write to file
 newarray = []
 newtotal = ''
 newlist = open(out, 'r')
@@ -356,7 +357,7 @@ for i in newarray:
 with open(out, 'w') as fp:
     fp.write(newtotal)
 
-
+#remove dupllicate values
 completed_lines_hash = set()
 deduped = ''
 
