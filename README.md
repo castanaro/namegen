@@ -22,6 +22,6 @@ If no domain is specified, will output only names in specified format.
 
 If no domain is specified:
 
-![image](https://user-images.githubusercontent.com/66240320/190868739-c5e7471b-e88a-4d32-87fd-d24ae6eca15c.png)
+![image](https://user-images.githubusercontent.com/66240320/190869038-f3566b40-6452-46eb-a23b-3183223d30b3.png)
 
-![image](https://user-images.githubusercontent.com/66240320/190868701-a92523a7-bc71-4529-b547-d06adddf674f.png)
+![image](https://user-images.githubusercontent.com/66240320/190869057-92cc5062-0d0b-4292-a6c9-11d42ec39a96.png)
