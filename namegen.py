@@ -416,7 +416,6 @@ randomized = ''
 if args.randomize:
     with open(out, 'w') as fp:
         fp.write(deduped)
-    print('randomizing')
     with open(out,'r') as source:
         data = [ (random.random(), line) for line in source ]
     data.sort()
