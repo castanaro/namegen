@@ -16,6 +16,6 @@ If no domain is specified, will output only names in specified format.
 
 ![image](https://user-images.githubusercontent.com/66240320/190867967-5e96c513-098c-4811-9f7f-88c118eed6d3.png)
 
-![image](https://user-images.githubusercontent.com/66240320/190868014-f2cfc9ee-eee4-4400-a088-6883f5491918.png)
+![image](https://user-images.githubusercontent.com/66240320/190868619-a3b1702d-4f7e-4d7d-a5ae-be0aabed2ed8.png)
 
-![image](https://user-images.githubusercontent.com/66240320/190867990-704f3c6c-ebeb-4b0a-b448-f0ae00cc735d.png)
+![image](https://user-images.githubusercontent.com/66240320/190868656-37f8a3b6-69cf-4fa7-a7cb-1310ef95bf5d.png)
