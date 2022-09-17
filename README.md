@@ -16,7 +16,21 @@ Tip: A helpful place to start could be pulling down most common first and last n
 
 https://github.com/danielmiessler/SecLists/tree/master/Usernames
 
-## Example Screenshots:
+### Flags:
+
+-h help
+
+-f accepts a file with first names
+
+-l accepts a file with last names
+
+-o accepts an output file, if ommitted, writes to namegen-output.txt
+
+-d accepts a domain e.g., domain.com
+
+-r randomizes the output which can be helpful for large alphabetical lists where the user won't have enough time to validate all of them
+
+### Example Screenshots:
 
 ![image](https://user-images.githubusercontent.com/66240320/190875751-18dac881-d667-45f2-a894-8410653cb97b.png)
 
