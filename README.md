@@ -12,6 +12,9 @@ Results are written to namegen-output.txt if no output file is specified.
 
 If no domain is specified, will output only names in specified format.
 
+
+## Example Screenshots:
+
 ![image](https://user-images.githubusercontent.com/66240320/190865244-03c2745d-8def-45b4-9986-f09e344b3e74.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190868619-a3b1702d-4f7e-4d7d-a5ae-be0aabed2ed8.png)
