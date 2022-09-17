@@ -12,6 +12,9 @@ Results are written to namegen-output.txt if no output file is specified.
 
 If no domain is specified, will output only names in specified format.
 
+Tip: A helpful place to start could be pulling down most common first and last names from Daniel Meissler's SecLists and creating some combinations off of those. Enjoy!
+
+https://github.com/danielmiessler/SecLists/tree/master/Usernames
 
 ## Example Screenshots:
 
