@@ -9,6 +9,7 @@ A name generator useful for OSINT phases in penetration testing/red teaming.
 Inspiration from superkojiman's namemash.py.
 
 '''
+
 from argparse import RawTextHelpFormatter
 import argparse
 import sys
