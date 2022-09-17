@@ -15,6 +15,7 @@ import argparse
 import sys
 import hashlib
 import os
+import random
 
 if __name__ == '__main__': 
 
@@ -23,6 +24,7 @@ if __name__ == '__main__':
     parser.add_argument('-l','--last', help='select a file with last names (one name per line)')
     parser.add_argument('-o','--output', help='select an output file (doesn\'t need to exist)')
     parser.add_argument('-d','--domain', type=str, help='select a domain to append to the names (e.g., domain.com)')
+    parser.add_argument('-r','--randomize', action='store_true', help='randomize the order of names within the final output file (helpful for large lists where user lacks the time to spray entire list)')
     if len(sys.argv)==1:
         parser.print_help(sys.stderr)
         sys.exit(1)
@@ -32,6 +34,7 @@ first = args.first
 last = args.last
 out = args.output
 domain = args.domain
+
 
 #if no output file specified, write to namegen-output.txt
 if args.output is None:
@@ -408,9 +411,24 @@ with open(out, 'r') as fp:
             completed_lines_hash.add(hashValue)
             deduped = deduped + line
 
-print("\n" + deduped)
-with open(out, 'w') as fp:
-    fp.write(deduped)
+#handle randomization of output if selected
+randomized = ''
+if args.randomize:
+    with open(out, 'w') as fp:
+        fp.write(deduped)
+    print('randomizing')
+    with open(out,'r') as source:
+        data = [ (random.random(), line) for line in source ]
+    data.sort()
+    with open(out,'w') as target:
+        for _, line in data:
+            target.write( line )
+            randomized = randomized + line
+    print("\n" + randomized)
+else:
+    print("\n" + deduped)
+    with open(out, 'w') as fp:
+        fp.write(deduped)
 
 #write results to specified file or namegen-output.txt if none specified
 print("Results written to file: " + out + ".")
