@@ -13,6 +13,7 @@ from argparse import RawTextHelpFormatter
 import argparse
 import sys
 import hashlib
+import os
 
 if __name__ == '__main__': 
 
@@ -25,8 +26,7 @@ if __name__ == '__main__':
         parser.print_help(sys.stderr)
         sys.exit(1)
     args = parser.parse_args()
-
-#assign command line args to vars
+    
 first = args.first
 last = args.last
 out = args.output
@@ -35,6 +35,27 @@ domain = args.domain
 #if no output file specified, write to namegen-output.txt
 if args.output is None:
     out = 'namegen-output.txt'
+
+#check if first name file exists
+while True:
+    if args.first is None:
+        break 
+    elif os.path.isfile(args.first):
+        break
+    else:
+        print('\nThe file ' + '\'' + args.first + '\''+' does not exist. Please select a file with first names.\n')
+        sys.exit()
+
+#check if last name file exists
+while True:
+    if args.last is None:
+        break 
+    elif os.path.isfile(args.last):
+        break
+    else:
+        print('\nThe file ' + '\'' + args.last + '\''+' does not exist. Please select a file with last names.\n')
+        sys.exit()
+
 
 print("\nFormat Options: \n")
 print("|------------------------------|")
@@ -358,7 +379,7 @@ for i in newarray:
 with open(out, 'w') as fp:
     fp.write(newtotal)
 
-#remove dupllicate values
+#remove duplicate values
 completed_lines_hash = set()
 deduped = ''
 
@@ -373,4 +394,5 @@ print("\n" + deduped)
 with open(out, 'w') as fp:
     fp.write(deduped)
 
+#write results to specified file or namegen-output.txt if none specified
 print("Results written to file: " + out + ".")
