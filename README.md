@@ -18,7 +18,7 @@ https://github.com/danielmiessler/SecLists/tree/master/Usernames
 
 ## Example Screenshots:
 
-![image](https://user-images.githubusercontent.com/66240320/190865244-03c2745d-8def-45b4-9986-f09e344b3e74.png)
+![image](https://user-images.githubusercontent.com/66240320/190875751-18dac881-d667-45f2-a894-8410653cb97b.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190868619-a3b1702d-4f7e-4d7d-a5ae-be0aabed2ed8.png)
 
@@ -31,3 +31,9 @@ If no domain is specified:
 ![image](https://user-images.githubusercontent.com/66240320/190869038-f3566b40-6452-46eb-a23b-3183223d30b3.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190869057-92cc5062-0d0b-4292-a6c9-11d42ec39a96.png)
+
+If -r is specified, output will be randomized:
+
+![image](https://user-images.githubusercontent.com/66240320/190875779-3ca2e03f-2823-446c-9e0d-6f112bcfa25f.png)
+
+![image](https://user-images.githubusercontent.com/66240320/190875812-b7653e54-32da-4fd9-a6be-beac41d08604.png)
