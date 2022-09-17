@@ -25,7 +25,8 @@ if __name__ == '__main__':
         parser.print_help(sys.stderr)
         sys.exit(1)
     args = parser.parse_args()
-    
+
+#assign command line args to vars
 first = args.first
 last = args.last
 out = args.output
