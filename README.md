@@ -16,6 +16,10 @@ Tip: A helpful place to start could be pulling down most common first and last n
 
 https://github.com/danielmiessler/SecLists/tree/master/Usernames
 
+### Write Up
+
+https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-abd4a733176a
+
 ### Flags:
 
 -h help
