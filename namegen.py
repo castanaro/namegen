@@ -76,6 +76,8 @@ if args.domain is not None:
     print("| 10 - firstl@domain.com       |")
     print("| 11 - first@domain.com        |")
     print("| 12 - last@domain.com         |")
+    print("| 13 - first_last@domain.com   |")
+    print("| 14 - last_first@domain.com   |")
     print("|______________________________|\n")
 else:
     print("\nFormat Options: \n")
@@ -92,6 +94,8 @@ else:
     print("| 10 - firstl         |")
     print("| 11 - first          |")
     print("| 12 - last           |")
+    print("| 13 - first_last     |")
+    print("| 14 - last_first     |")
     print("|_____________________|\n")
 
 #ensure selection is within Format Options
@@ -101,7 +105,7 @@ while True:
     except ValueError:
         print('\nPlease select a number from the above options.\n')
     else:
-        if choice not in (range(1, 13)):
+        if choice not in (range(1, 15)):
             print("\nSelect a number from the above options.\n")
         else:
             break
@@ -381,6 +385,52 @@ elif choice == 12:
         file = open(out, 'w+')
         file.write(total)
         file.close()
+
+#first_last
+elif choice == 13:
+    if args.first is None or args.last is None:
+        print("\nPlease supply a file containing first and last names using the -f and -l flags (e.g., -f first.txt -l last.txt).")
+        sys.exit() 
+
+    fulllist = [] 
+    list1 = open(first,'r') 
+    total = ''
+    for i in list1: 
+        fulllist.append(i.strip()) 
+    list1.close()
+    for list_item in fulllist: 
+        list2 = open(last,'r') 
+        for i in list2: 
+            final = str(list_item) + "_" + str(i)
+            total = total+final
+    list2.close()
+
+    file = open(out, 'w+')
+    file.write(total)
+    file.close()
+
+#last_first
+elif choice == 14:
+    if args.first is None or args.last is None:
+        print("\nPlease supply a file containing first and last names using the -f and -l flags (e.g., -f first.txt -l last.txt).")
+        sys.exit() 
+
+    fulllist = [] 
+    list1 = open(last,'r') 
+    total = ''
+    for i in list1: 
+        fulllist.append(i.strip()) 
+    list1.close()
+    for list_item in fulllist: 
+        list2 = open(first,'r') 
+        for i in list2: 
+            final = str(list_item) + "_" + str(i) 
+            total = total+final
+    list2.close()
+
+    file = open(out, 'w+')
+    file.write(total)
+    file.close()
 
 
 #append the domain (if supplied) and write to file
