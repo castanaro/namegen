@@ -40,18 +40,18 @@ https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-ab
 
 ![image](https://user-images.githubusercontent.com/66240320/190868619-a3b1702d-4f7e-4d7d-a5ae-be0aabed2ed8.png)
 
-![image](https://user-images.githubusercontent.com/66240320/190867967-5e96c513-098c-4811-9f7f-88c118eed6d3.png)
+![image](https://user-images.githubusercontent.com/66240320/192322163-c1defb8e-dfbf-49d2-8fae-ffd831399078.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190868656-37f8a3b6-69cf-4fa7-a7cb-1310ef95bf5d.png)
 
 If no domain is specified:
 
-![image](https://user-images.githubusercontent.com/66240320/190869038-f3566b40-6452-46eb-a23b-3183223d30b3.png)
+![image](https://user-images.githubusercontent.com/66240320/192322396-ccae979a-8625-438f-b494-7ca4f7c4fab0.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190869057-92cc5062-0d0b-4292-a6c9-11d42ec39a96.png)
 
 If -r is specified, output will be randomized:
 
-![image](https://user-images.githubusercontent.com/66240320/190875779-3ca2e03f-2823-446c-9e0d-6f112bcfa25f.png)
+![image](https://user-images.githubusercontent.com/66240320/192322551-39d809d6-ad84-4b3b-9e96-f1ea16816218.png)
 
 ![image](https://user-images.githubusercontent.com/66240320/190875812-b7653e54-32da-4fd9-a6be-beac41d08604.png)
