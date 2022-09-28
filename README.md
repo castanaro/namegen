@@ -8,10 +8,6 @@ usage: namegen.py [-h] [-f FIRST] [-l LAST] [-o OUTPUT] [-d DOMAIN] [-r]
 
 Example: ./namegen.py -f first.txt -l last.txt -o output.txt -d domain.com (select a '#' when prompted)
 
-Results are written to namegen-output.txt if no output file is specified.
-
-If no domain is specified, will output only names in specified format.
-
 Tip: A helpful place to start could be pulling down most common first and last names from Daniel Miessler's SecLists or using the provided lists within this repo. Enjoy!
 
 https://github.com/danielmiessler/SecLists/tree/master/Usernames
@@ -33,6 +29,14 @@ https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-ab
 -d accepts a domain e.g., domain.com
 
 -r randomizes the output which can be helpful for large alphabetical lists where the user won't have enough time to validate all of them
+
+### Features:
+
+- All args are optional and non-positonal
+- Results are written to namegen-output.txt if no output file is specified
+- If no domain is specified, will output only names in specified format
+- Removes Duplicates
+- Removes Special Chars (helpful if passing a list from a LinkedIn or other online source)
 
 ### Example Screenshots:
 
