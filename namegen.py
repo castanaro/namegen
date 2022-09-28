@@ -60,6 +60,50 @@ while True:
         print('\nThe file ' + '\'' + args.last + '\''+' does not exist. Please select a file with last names.\n')
         sys.exit()
 
+#remove special chars from first name file
+if args.first is not None:
+    myFile = open(first, 'r')
+    store_new = []
+    for i in myFile:
+        alphanumeric = '' 
+        tempstring = i 
+        for character in tempstring: #for each char in the line, check for special chars
+            if character.isalnum():
+                alphanumeric += character #add the char to a string if not special char
+        store_new.append(alphanumeric) #append resulting string to our list
+    
+    with open(first, 'r'):
+        newtotal = ''
+        newfinal = ''
+        for i in store_new: #iterate through each list item from above (which contains names without special chars)
+            newtotal = str(i) + "\n"
+            newfinal = newfinal + newtotal
+
+    with open(first, 'w') as fp:
+        fp.write(newfinal)
+
+#remove special chars from last name file
+if args.last is not None:
+    myFile = open(last, 'r')
+    store_new = []
+    for i in myFile:
+        alphanumeric = '' 
+        tempstring = i 
+        for character in tempstring: # for each char in the line, check for special chars
+            if character.isalnum():
+                alphanumeric += character # add the char to a string if not special char
+        store_new.append(alphanumeric) # append resulting string to our list
+    
+    with open(last, 'r'):
+        newtotal = ''
+        newfinal = ''
+        for i in store_new: #iterate through each list item from above (which contains names without special chars)
+            newtotal = str(i) + "\n"
+            newfinal = newfinal + newtotal
+
+    with open(last, 'w') as fp:
+        fp.write(newfinal)
+
 #supply options menu format dependent upon domain flag
 if args.domain is not None:
     print("\nFormat Options: \n")
