@@ -1,5 +1,7 @@
 # namegen.py
 
+### Usage:
+
 Namegen is useful during the OSINT phase of a pen test/red team to assist with account generation. These accounts can later be validated and then used for pass spraying. 
 
 Namegen takes files comprised of first and/or last names, formats them based upon a selection (e.g., first.last), appends a chosen domain (if specified), and outputs to a file.
@@ -11,10 +13,6 @@ Example: ./namegen.py -f first.txt -l last.txt -o output.txt -d domain.com (sele
 Tip: A helpful place to start could be pulling down most common first and last names from Daniel Miessler's SecLists or using the provided lists within this repo. Enjoy!
 
 https://github.com/danielmiessler/SecLists/tree/master/Usernames
-
-### Write Up
-
-https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-abd4a733176a
 
 ### Flags:
 
@@ -37,6 +35,10 @@ https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-ab
 - If no domain is specified, will output only names in specified format
 - Removes Duplicates
 - Removes Special Chars (helpful if passing a list from a LinkedIn or other online source)
+
+### Write Up
+
+https://medium.com/@castanaro/namegen-py-generate-names-for-password-spraying-abd4a733176a
 
 ### Example Screenshots:
 
